@@ -8,6 +8,7 @@ const Movies = () => {
   useEffect(()=>{
     getAllMovies().then((data)=>setMovies(data)).catch(err=>console.log(err));
   },[]);
+  
   return <Box margin={'auto'} marginTop={4}>
     <Typography variant = "h4"
     margin={"auto"}
@@ -20,7 +21,8 @@ const Movies = () => {
       All Movies
     </Typography>
     <Box width={'100%'} margin="auto" display={"flex"} justifyContent = {"flex-start"} flexWrap={"wrap"}>
-      {movies && movies.map((movie,index)=><Movieitem id={movie.id} title={movie.title} posterUrl={movie.posterUrl} releaseDate={movie.releaseDate}></Movieitem>
+      
+      {movies && movies.map((movie,index)=><Movieitem id={movie._id} title={movie.title} posterUrl={movie.posterUrl} releaseDate={movie.releaseDate}></Movieitem>
         )}
     </Box>
   </Box>

@@ -24,7 +24,7 @@ const HomePage = () => {
     </Box>
     <Box display="flex" width="80%" justifyContent={'center'} flexWrap="wrap">
         {movies && movies.slice(0,4).map((movie, index)=>(
-            <Movieitem id={movie.id} title={movie.title} posterUrl={movie.posterUrl} releaseDate={movie.releaseDate}></Movieitem>
+            <Movieitem id={movie._id} title={movie.title} posterUrl={movie.posterUrl} releaseDate={movie.releaseDate}></Movieitem>
         ))}
     </Box>
     <Box display="flex" padding={5} margin="auto">
