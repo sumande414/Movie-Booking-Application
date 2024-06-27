@@ -30,7 +30,7 @@ export const newBooking = async(req, res, next)=>{
         booking = new Booking({
             movie,
             date: new Date(`${date}`),
-            seat, user,
+            seat, user
         });
         const session = await mongoose.startSession();
         session.startTransaction();

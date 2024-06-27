@@ -12,7 +12,8 @@ const Auth = () => {
     localStorage.setItem("userId", data.id)
   }
     const getData = (data)=>{
-        sendUserAuthRequest(data.inputs, data.signup).then(onResReceived).catch(e=>console.log(e));
+      console.log(data);
+        sendUserAuthRequest(data.inputs, data.signup).then(onResReceived).catch((e)=>console.log(e));
     }
   return (
     <div>

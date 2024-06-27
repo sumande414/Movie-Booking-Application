@@ -102,7 +102,7 @@ export const login = async(req,res,next)=>{
         return res.status(400).json({message : "Incorrect Password"});
     }
     else{
-        return res.status(200).json({message : "Logged in successfully"});
+        return res.status(200).json({message:"Logged in successfully", id : existingUser._id});
     }
 
 
